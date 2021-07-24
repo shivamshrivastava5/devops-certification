@@ -1,2 +1,0 @@
-FROM edureka-devops/webapp
-ADD website /var/www/html
