@@ -2,7 +2,6 @@ FROM devopsedu/webapp
 RUN apt-get update
 RUN apt-get install -y apache2
 RUN apt-get install -y apache2-utils
-RUN libapache2-mod-php7.0 \
 RUN apache2 \
 RUN php7.0 \
 RUN apt-get clean
