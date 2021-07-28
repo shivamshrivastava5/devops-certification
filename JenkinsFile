@@ -8,7 +8,7 @@ pipeline {
                 echo 'Install Puppet'
 		sh "curl -O https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb"
                 sh "sudo dpkg -i puppetlabs-release-pc1-xenial.deb"
-                sh "sudo yum install -y puppet-agent"
+                sh "sudo yum install puppetserver"
             }
         }
 
