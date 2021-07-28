@@ -10,7 +10,7 @@ pipeline {
                 sh "chmod 755 puppet.deb"
                 sh "sudo dpkg -i puppet.deb"
 		sh "sudo yum update"
-		sh "yum load-transaction /tmp/yum_save_tx.2021-07-28.16-04.CcTycg.yumtx"
+		sh "yum install httpd php php-cli gcc glibc glibc-common gd gd-devel net-snmp openssl-devel wget unzip"
                 sh "sudo yum install -y puppet-agent"
             }
         }
