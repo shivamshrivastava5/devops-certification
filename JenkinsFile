@@ -11,6 +11,7 @@ pipeline {
                 sh "sudo dpkg -i puppet.deb"
                 sh "sudo yum update --assumeyes" 
                 sh "sudo yum install -y puppet-agent"
+		sh "yum clean all"
             }
         }
 
