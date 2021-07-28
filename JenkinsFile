@@ -9,7 +9,6 @@ pipeline {
                 sh "wget -N -O 'puppet.deb' https://apt.puppetlabs.com/puppet6-release-bionic.deb"
                 sh "chmod 755 puppet.deb"
                 sh "sudo dpkg -i puppet.deb"
-		sh "sudo yum install httpd24"
 		sh "yum install httpd php php-cli gcc glibc glibc-common gd gd-devel net-snmp openssl-devel wget unzip"
                 sh "sudo yum install -y puppet-agent"
             }
