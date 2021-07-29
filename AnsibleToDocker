@@ -1,0 +1,24 @@
+pipeline
+{
+    agent any
+    tools {
+  maven 'my maven'
+    }
+    stages{
+           stage('install ansible'){
+                                   steps{
+                                        sh  "sudo yum update"
+                                        sh  "sudo yum install git python-yaml python-jinja2 python-pycurl"
+                                        sh "rm -rf ansible"
+                                        sh  "git clone https://github.com/ansible/ansible.git"
+                                     
+                                   }
+           }
+           stage('configure ansible with docker'){
+               steps{
+                   sh "ansible-galaxy collection install community.docker"
+                   sh "docker -v"
+               }
+           }
+          }
+ }
